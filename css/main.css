@@ -48,7 +48,7 @@
     align-items: center;
     width: 100%;
     justify-content: center;
-    
+
 }
 
 .link_menu {
@@ -88,7 +88,7 @@
     width: 320px;
     height: auto;
     color: white;
-    
+
 
 }
 
@@ -225,7 +225,7 @@
     justify-content: center;
     margin-top: 80px;
     text-align: center;
-    
+
 }
 .how_block {
     text-align: center;
@@ -392,7 +392,7 @@ text-align: left;
 .expert_button a {
     text-decoration: none;
         color: white;
-    
+
 }
 
 .expert_info {
@@ -465,7 +465,7 @@ text-align: left;
     background-color: #F5F5F5;
 display: block;
     padding-top: 30px;
-    
+
 }
 
 .block_reviews h1{
@@ -515,7 +515,7 @@ display: block;
 
 .rev_dol span {
     color: rebeccapurple;
-    
+
 }
 
 .rev1 {
@@ -573,7 +573,7 @@ display: block;
     padding-left: 20px;
     font-weight: 400;
     font-size: 1em;
-    
+
 }
 #feed_text {
     height: 180px;
@@ -632,4 +632,81 @@ display: block;
     .to_down {
         display: none;
     }
+}
+.footer{
+  padding-top: 60px;
+  padding-bottom: 75px;
+  background-color: #111111;
+}
+.footer .container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+}
+.footer .container::after, .footer .container::before{
+  display: table;
+  content: " ";
+}
+.footer .container::after{
+  clear: both;
+}
+
+.footer .col{
+  display: inline;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+}
+.footer .col_3{
+  max-width: 260px;
+}
+.footer .logo_footer{
+  display: block;
+  max-width: 120px;
+  width: 100%;
+}
+.footer .sociallinks{
+  margin-top: 30px;
+}
+.footer .sociallinks_item{
+  display: inline-block;
+  margin-right: 4px;
+  -webkit-transition: opacity ease-in-out 0.2s;
+  -moz-transition: opacity ease-in-out 0.2s;
+  -o-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
+}
+.footer .text{
+  color:#525252;
+  margin-top: 21px;
+  font-size: 12px;
+}
+.footer .title{
+  margin-bottom: 14px;
+  color:#FFF;
+}
+.footer .title_uppercase{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.footer .descr{
+  font-weight: 300;
+}
+.footer .descr_xxs{
+  font-size: 14px;
+  line-height: 1.55;
+}
+.footer .descr ul{
+  padding: 0 !important;
+  margin: 0;
+}
+.footer .descr li{
+  display: block;
+  margin-bottom: 10px;
+}
+.footer .descr a{
+  color: inherit !important;
 }
