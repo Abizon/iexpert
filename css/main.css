@@ -710,3 +710,48 @@ display: block;
 .footer .descr a{
   color: inherit !important;
 }
+@media screen and (max-width: 420px)
+.footer .col, .footer .col_3 {
+    max-width: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 640px)
+.footer .col, .footer .col_3 {
+    max-width: 50%;
+    width: 100%;
+}
+@media screen and (max-width: 960px)
+.footer .col, .footer .col_3 {
+    max-width: 320px;
+    display: inline;
+    float: left;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 960px)
+.footer .col_3 {
+    width: 100%;
+    max-width: 100%;
+}
+@media screen and (max-width: 960px)
+.footer .col {
+    display: block;
+    float: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 1200px)
+.footer .col_3 {
+    max-width: 220px;
+}
+@media screen and (max-width: 1200px)
+.footer .col {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+}
