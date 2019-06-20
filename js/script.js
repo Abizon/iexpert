@@ -116,3 +116,29 @@ $(document).ready(function () {
         });
     }, 5000);
 });
+
+$(document).ready(function () {
+    var list = $('.revs');
+    var display = 1;
+
+    setInterval(function () {
+        list.map(function () {
+            var group1 = $(this).find('.rev_1');
+            var group2 = $(this).find('.rev_2');
+
+            group1.removeClass('rev_dispay rev_none');
+            group2.removeClass('rev_dispay rev_none');
+
+            if (display == 1) {
+                group1.addClass('rev_dispay');
+                group2.addClass('rev_none');
+                display = 2;
+            }
+            else {
+                group2.addClass('rev_dispay');
+                group1.addClass('rev_none');
+                display = 1;
+            }
+        });
+    }, 60000);
+});

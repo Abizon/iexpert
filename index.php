@@ -225,36 +225,76 @@
             <h1>ОТЗЫВЫ О НАС</h1>
             <center>
                 <div class="revs">
-                    <div class="rev">
+                    <div class="rev rev_1">
                         <div class="rev1"></div>
                         <div class="rev_text">
                             <h3>Вы профессионалы! Спасибо за уделенное время на решение проблем. Качественно, быстро, эффективно.</h3>
                             <div class="rev_name">Николай Пономарев</div>
                             <div class="rev_dol">Генеральный директор <span>ООО "АгроПром"</span></div>
+                            <div class="rev_date"><i class="fas fa-calendar-day"></i>11/5/19</div>
                         </div>
                     </div>
-                    <div class="rev">
+                    <div class="rev rev_1">
                         <div class="rev2"></div>
                         <div class="rev_text">
                             <h3>Мы узнали много нового и получили очень дельные советы. Очень рекомендуем обращаться к Олегу Соболеву!</h3>
                             <div class="rev_name">Даниил Калиниченко</div>
                             <div class="rev_dol">Финансовый менеджер в <span>DD agency</span></div>
+                            <div class="rev_date"><i class="fas fa-calendar-day"></i>11/5/19</div>
                         </div>
                     </div>
-                    <div class="rev">
+                    <div class="rev rev_1">
                         <div class="rev3"></div>
                         <div class="rev_text">
                             <h3>Быстро решили вопрос. Помогли с решением ряда проблем, ответы на которые не найдешь на других ресурсах. Спасибо!</h3>
                             <div class="rev_name">Юлия Санина</div>
                             <div class="rev_dol">Основатель <span>Школа программирования "IQ-школа"</span></div>
+                            <div class="rev_date"><i class="fas fa-calendar-day"></i>11/5/19</div>
                         </div>
                     </div>
-                    <div class="rev">
+                    <div class="rev rev_1">
                         <div class="rev4"></div>
                         <div class="rev_text">
                             <h3>Идеальный сервис для меня. Грамотные эксперты и быстрое обслуживание.</h3>
                             <div class="rev_name">Саша Коротких</div>
                             <div class="rev_dol">Креативный директор <span>SoSoul magazine</span></div>
+                            <div class="rev_date"><i class="fas fa-calendar-day"></i>11/5/19</div>
+                        </div>
+                    </div>
+                    <div class="rev rev_2 rev_none">
+                        <div class="rev2"></div>
+                        <div class="rev_text">
+                            <h3>Мы узнали много нового и получили очень дельные советы. Очень рекомендуем обращаться к Олегу Соболеву!</h3>
+                            <div class="rev_name">Даниил Калиниченко</div>
+                            <div class="rev_dol">Финансовый менеджер в <span>DD agency</span></div>
+                            <div class="rev_date"><i class="fas fa-calendar-day"></i>11/5/19</div>
+                        </div>
+                    </div>
+                    <div class="rev rev_2 rev_none">
+                        <div class="rev3"></div>
+                        <div class="rev_text">
+                            <h3>Быстро решили вопрос. Помогли с решением ряда проблем, ответы на которые не найдешь на других ресурсах. Спасибо!</h3>
+                            <div class="rev_name">Юлия Санина</div>
+                            <div class="rev_dol">Основатель <span>Школа программирования "IQ-школа"</span></div>
+                            <div class="rev_date"><i class="fas fa-calendar-day"></i>11/5/19</div>
+                        </div>
+                    </div>
+                    <div class="rev rev_2 rev_none">
+                        <div class="rev4"></div>
+                        <div class="rev_text">
+                            <h3>Идеальный сервис для меня. Грамотные эксперты и быстрое обслуживание.</h3>
+                            <div class="rev_name">Саша Коротких</div>
+                            <div class="rev_dol">Креативный директор <span>SoSoul magazine</span></div>
+                            <div class="rev_date"><i class="fas fa-calendar-day"></i>11/5/19</div>
+                        </div>
+                    </div>
+                    <div class="rev rev_2 rev_none">
+                        <div class="rev1"></div>
+                        <div class="rev_text">
+                            <h3>Вы профессионалы! Спасибо за уделенное время на решение проблем. Качественно, быстро, эффективно.</h3>
+                            <div class="rev_name">Николай Пономарев</div>
+                            <div class="rev_dol">Генеральный директор <span>ООО "АгроПром"</span></div>
+                            <div class="rev_date"><i class="fas fa-calendar-day"></i>11/5/19</div>
                         </div>
                     </div>
                 </div>
