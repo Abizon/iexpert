@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>ЯЭксперт</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/popups.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
@@ -65,7 +66,7 @@
     <div class="how_work">
         <h1>Как это работает</h1>
 
-        <center>
+        <div style="text-align: center">
             <div class="how_blocks">
                 <div class="how_block"><i class="fas fa-user-graduate"></i>
                     <h2>Зарегистрируйтесь на сайте
@@ -101,7 +102,7 @@
                 </div>
 
             </div>
-        </center>
+        </div>
 
         <h1>Мы помогаем решать проблемы</h1>
         <h2>Поддерживаем наших клиентов в быстром и<br> успешном развитии бизнеса</h2>
@@ -126,7 +127,7 @@
 
 
             <div class="experts_gl_block">
-                <div class="expert2"><i class="fas fa-circle online" style="color: red;"></i></div>
+                <div class="expert2"><i class="fas fa-circle offline"></i></div>
                 <div class="expert_info">
                     <div class="expert_name">Смирнов Василий</div>
 
