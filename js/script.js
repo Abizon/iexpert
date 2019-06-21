@@ -73,16 +73,11 @@ $("#pop_button1").click(function () {
 
     }
 });
-
-$("#minus").click(function () {
-    if (JSON.parse(localStorage.getItem("balance")) < price) {
-        alert('Недостаточно средств');
-    } else {
-        localStorage.setItem("balance", JSON.parse(localStorage.getItem("balance")) - price);
-        $("#user_balance").html('' + JSON.parse(localStorage.getItem("balance")) + ' руб.');
-        localStorage.setItem("bal", JSON.stringify('' + JSON.parse(localStorage.getItem("balance")) + ' руб.'));
-    }
-
+$("#chat").click(function () {
+    $(".chat").show();
+})
+$(".close").click(function(){
+  $(".chat").hide();
 })
 
 function closer() {
@@ -106,7 +101,7 @@ $(document).ready(function () {
         list.map(function () {
             var online = Math.random() > .5;
 			var state = $(this).find('.fas.fa-circle');
-			
+
 			state.removeClass('online offline');
 
             if (online)

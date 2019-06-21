@@ -119,7 +119,7 @@
                         Степени MBA, BBA, CFA
                         #бизнесконсультант #бизнесэксперт #маркетинг #PR
 
-                        <a href="#" class="tn expert_button"><div class="">Написать эксперту</div></a>
+                        <a class="tn expert_button"><div class="">Написать эксперту</div></a>
 
                     </div>
 
@@ -136,7 +136,7 @@
                         Управление проектами в сфере строительства. 12 лет работы в ОАО "МостСтройОтряд". Консультирование по стройматериалам.
                         #строительство #стройматериалы #управление #учётвстроительстве
 
-                        <a href="#" class="tn expert_button"><div class="">Написать эксперту</div></a>
+                        <a class="tn expert_button"><div class="">Написать эксперту</div></a>
 
                     </div>
 
@@ -153,7 +153,7 @@
                         Консультации по отношениям с фондами. Бизнес ангел на протяжении 5 лет. Ментор Сколково. Помощь в получении инвестиций.
                         #бизнесконсультант #бизнесэксперт #инвестиции #фонд
 
-                <a href="#" class="tn expert_button" id="minus"><div class="">Написать эксперту</div></a>
+                <a class="tn expert_button" id="chat"><div class="">Написать эксперту</div></a>
                     </div>
 
                 </div>
@@ -400,9 +400,21 @@
       </div>
     </div>
   </div>
+  <div class="chat" style="display:none">
+    <div class="chat-header">
+      <span class="header-label">Чат</span>
+      <i class="fas fa-times close"></i>
+    </div>
+    <div id="chat-content"></div>
+    <div class="editor">
+      <input type="text" id="message" placeholder="Введите сообщение..." />
+      <a id="send" class="btn btn-icon btn-big right"><i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <script src="js/chat.js"></script>
 </body>
 
 </html>
