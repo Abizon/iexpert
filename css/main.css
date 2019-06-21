@@ -203,7 +203,7 @@
 }
 
 .how_work {
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .how_work h1 {
@@ -607,10 +607,15 @@
 .feedback {
     display: flex;
     flex-wrap: wrap;
-    height: 800px;
+    height: 500px;
     width: 80%;
     justify-content: center;
     text-align: left;
+}
+@media screen and (max-width: 1250px) {
+    .feedback {
+        height: 800px;
+    }
 }
 
 .feedback_left {
