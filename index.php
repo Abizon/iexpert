@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЯЭксперт</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/popups.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
@@ -16,55 +17,53 @@
 
     <header>
         <div class="navbar">
-            <a href="#" class="logo"></a>
-            <ul class="menu">
-                <a href="#" class="link_menu">
-                    <li>ГЛАВНАЯ</li>
-                </a>
-                <a href="#" class="link_menu">
-                    <li>О НАС</li>
-                </a>
-                <a href="#" class="link_menu">
-                    <li>НАЙТИ ЭКСПЕРТА</li>
-                </a>
-                <a href="#" class="link_menu">
-                    <li>СТАТЬ ЭКСПЕРТОМ</li>
-                </a>
-                <a href="#" class="link_menu">
-                    <li>КОНТАКТЫ</li>
-                </a>
-                <a href="#" class="burger">
-                    <i class="fas fa-bars"></i>
-                </a>
-
-            </ul>
-            <div class="profile">
-                <div class="prof_phwh">
-                    <div id="user_photo"></div>
-                    <div id="user_who"></div>
-                </div>
-                <div class="user_in">
-                    <div id="user_name"></div>
-
-                    <div id="user_balance"></div>
-                </div>
+          <a href="#" class="logo"></a>
+          <ul class="menu">
+            <a href="#" class="link_menu">
+              <li>ГЛАВНАЯ</li>
+            </a>
+            <a href="about.php" class="link_menu">
+              <li>О НАС</li>
+            </a>
+            <a href="select.php" class="link_menu">
+              <li>НАЙТИ ЭКСПЕРТА</li>
+            </a>
+            <a href="expert.php" class="link_menu">
+              <li>СТАТЬ ЭКСПЕРТОМ</li>
+            </a>
+            <a href="contacts.php" class="link_menu">
+              <li>КОНТАКТЫ</li>
+            </a>
+            <a href="#" class="burger">
+              <i class="fas fa-bars"></i>
+            </a>
+          </ul>
+          <div class="profile">
+            <div class="prof_phwh">
+              <div id="user_photo"></div>
+                <div id="user_who"></div>
             </div>
+            <div class="user_in">
+              <div id="user_name"></div>
+              <div id="user_balance"></div>
+            </div>
+          </div>
         </div>
-    </header>
+      </header>
     <div class="head_preview">
 
         <div class="head_text">
             <div class="top_text">Найти эксперта<br>быстро и просто</div>
             <div class="bottom_text">получите консультацию от проверенных экспертов анонимно, позвонив<br>или написав письмо</div>
             <a href="#" class="head_button">НАЙТИ ЭКСПЕРТА</a>
-            <a href="#" class="to_down"><i class="fas fa-sort-down"></i></a>
+            <a href="#how_work" class="to_down"><i class="fas fa-sort-down"></i></a>
 
         </div>
 
     </div>
 
 
-    <div class="how_work">
+    <div class="how_work" id="how_work">
         <h1>Как это работает</h1>
 
         <div style="text-align: center">
@@ -322,8 +321,8 @@
         </center>
     </div>
     <div class="footer">
-        <div class="container">
-          <div class="col col_3">
+        <div class="container row">
+          <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3">
             <a href="#" style="color:#ffffff;font-size:20px;">
               <img src="img/logo_footer.png" class="logo_footer" imgfield="img" style="max-width: 170px;" alt="Получить консультацию">
             </a>
@@ -356,7 +355,7 @@
         </div>
         <div class="text">© 2019 Iexpert</div>
       </div>
-          <div class="col col_3">
+          <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3">
             <div class="title title_uppercase" style="color: #525252;">Получить консультацию</div>
             <div class="descr descr_xxs" style="color: #ffffff;">
               <ul>
@@ -375,7 +374,7 @@
               </ul>
             </div>
           </div>
-          <div class="col col_3">
+          <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3">
             <div class="title title_uppercase" style="color: #525252;">основа</div>
             <div class="descr descr_xxs" style="color: #ffffff;">
               <ul>
@@ -387,7 +386,7 @@
               </ul>
             </div>
           </div>
-      <div class="col col_3">
+      <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-3">
         <div class="title title_uppercase" style="color: #525252;">Польза</div>
         <div class="descr descr_xxs" style="color: #ffffff;">
           <ul>
@@ -412,7 +411,8 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/chat.js"></script>
 </body>

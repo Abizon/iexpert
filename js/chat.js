@@ -18,7 +18,7 @@ $("#send").click(function(){
       var chat_container = document.createElement('div');
       chat_container.className = "message-container";
       $message = " <div class=\"pic-container\"> <img src=\"https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg\" alt=\"\" class=\"profilePic\" />     <div class=\"status\"></div>  </div>  <h3 class=\"name\">";
-      $message += "Ваня";
+      $message += ''+JSON.parse(localStorage.getItem("name"))+'';
       $message += "</h3><div class=\"message\">";
       $message += "<p>"+$("#message").val()+"</p>";
       var date = new Date();

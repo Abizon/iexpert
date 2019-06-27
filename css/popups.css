@@ -38,7 +38,9 @@
     padding: 20px;
     align-self: center;
 }
-
+.poptogglers a:hover{
+  color:inherit;
+}
 .pop_toggle1 {
     width: 100%;
     color: white;
@@ -54,7 +56,7 @@
     align-self: center;
 }
 
-.pop_close {    
+.pop_close {
     padding: 20px;
     font-size: 1.5em;
     text-align: right;
@@ -66,7 +68,7 @@
     flex-direction: column;
     align-items: center;
     transition: .3s;
-    
+
 }
 
 #pop_info input {
@@ -98,6 +100,10 @@
     border-radius: 5px;
     margin-top: 6%;
     text-decoration: none;
+}
+.pop_button:hover{
+  color: inherit;
+  text-decoration: inherit;
 }
 
 #pop_info_exp {
