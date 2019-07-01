@@ -1,61 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЯЭксперт</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/popups.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-</head>
-
-<body>
-    <div id="preload"><span class="load"></span></div>
-    <?php include "pop.html"; ?>
-
-    <header>
-        <div class="navbar">
-          <a href="#" class="logo"></a>
-          <ul class="menu">
-            <a href="#" class="link_menu">
-              <li>ГЛАВНАЯ</li>
-            </a>
-            <a href="about.php" class="link_menu">
-              <li>О НАС</li>
-            </a>
-            <a href="select.php" class="link_menu">
-              <li>НАЙТИ ЭКСПЕРТА</li>
-            </a>
-            <a href="expert.php" class="link_menu">
-              <li>СТАТЬ ЭКСПЕРТОМ</li>
-            </a>
-            <a href="contacts.php" class="link_menu">
-              <li>КОНТАКТЫ</li>
-            </a>
-            <a href="#" class="burger">
-              <i class="fas fa-bars"></i>
-            </a>
-          </ul>
-          <div class="profile">
-            <div class="prof_phwh">
-              <div id="user_photo"></div>
-                <div id="user_who"></div>
-            </div>
-            <div class="user_in">
-              <div id="user_name"></div>
-              <div id="user_balance"></div>
-            </div>
-          </div>
-        </div>
-      </header>
+    <?php include "header.php"; ?>
     <div class="head_preview">
 
         <div class="head_text">
             <div class="top_text">Найти эксперта<br>быстро и просто</div>
             <div class="bottom_text">получите консультацию от проверенных экспертов анонимно, позвонив<br>или написав письмо</div>
-            <a href="#" class="head_button">НАЙТИ ЭКСПЕРТА</a>
+            <a href="select.php" class="head_button">НАЙТИ ЭКСПЕРТА</a>
             <a href="#how_work" class="to_down"><i class="fas fa-sort-down"></i></a>
 
         </div>
@@ -89,7 +38,7 @@
                     <h1>ПЫТАЕТЕСЬ ИСКАТЬ ЭКСПЕРТОВ В ИНТЕРНЕТЕ?</h1>
                     <h3>Мы сделали онлайн-консультации простыми.</h3>
                     <h3>Не нужно читать сотни блогов и тратить много времени, чтобы ответить на пару вопросов. Просто зайдите в нашу базу экспертов, выберите лучшего для своих задач и быстро получите консультацию.</h3>
-                    <a href="#" class="tn">
+                    <a href="select.php" class="tn">
                         <div class="how_button">Написать эксперту</div>
                     </a>
                 </div>
@@ -118,7 +67,7 @@
                         Степени MBA, BBA, CFA
                         #бизнесконсультант #бизнесэксперт #маркетинг #PR
 
-                        <a class="tn expert_button"><div class="">Написать эксперту</div></a>
+                        <a class="tn expert_button chat_button"><div class="">Написать эксперту</div></a>
 
                     </div>
 
@@ -135,7 +84,7 @@
                         Управление проектами в сфере строительства. 12 лет работы в ОАО "МостСтройОтряд". Консультирование по стройматериалам.
                         #строительство #стройматериалы #управление #учётвстроительстве
 
-                        <a class="tn expert_button"><div class="">Написать эксперту</div></a>
+                        <a class="tn expert_button chat_button"><div class="">Написать эксперту</div></a>
 
                     </div>
 
@@ -152,7 +101,7 @@
                         Консультации по отношениям с фондами. Бизнес ангел на протяжении 5 лет. Ментор Сколково. Помощь в получении инвестиций.
                         #бизнесконсультант #бизнесэксперт #инвестиции #фонд
 
-                <a class="tn expert_button" id="chat"><div class="">Написать эксперту</div></a>
+                <a class="tn expert_button chat_button" ><div class="">Написать эксперту</div></a>
                     </div>
 
                 </div>
@@ -216,7 +165,7 @@
                 </a>
 
 
-                <a href="#" class="expert_button m60 full">ВСЕ КАТЕГОРИИ</a>
+                <a href="select.php" class="expert_button m60 full">ВСЕ КАТЕГОРИИ</a>
 
             </div>
         </center>

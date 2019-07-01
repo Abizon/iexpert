@@ -73,8 +73,14 @@ $("#pop_button1").click(function () {
 
     }
 });
-$("#chat").click(function () {
+$(".chat_button").click(function () {
+  var name = JSON.parse(localStorage.getItem("name"));
+  if (name != null){
     $(".chat").show();
+  }
+  else{
+    $("#popback").show();
+  }
 })
 $(".close").click(function(){
   $(".chat").hide();
@@ -92,6 +98,28 @@ function closer() {
 }
 
 setTimeout(closer, 100)
+
+
+$(document).ready(function () {
+  var name = JSON.parse(localStorage.getItem("name"));
+  var profile = $(".profile");
+  var registration = $(".registration");
+  if (name != null){
+    profile.show();
+    registration.hide();
+  }
+  else {
+    profile.hide();
+    registration.show();
+  }
+});
+$(".registration").click(function(){
+  $("#popback").show();
+})
+$(".pop_close").click(function(){
+  $("#popback").hide();
+})
+
 
 
 $(document).ready(function () {

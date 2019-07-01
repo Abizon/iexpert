@@ -1,53 +1,114 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЯЭксперт</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/popups.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-</head>
-
-<body>
-  <div id="preload"><span class="load"></span></div>
-  <header>
-      <div class="navbar">
-        <a href="index.php" class="logo"></a>
-        <ul class="menu">
-          <a href="index.php" class="link_menu">
-            <li>ГЛАВНАЯ</li>
-          </a>
-          <a href="about.php" class="link_menu">
-            <li>О НАС</li>
-          </a>
-          <a href="select.php" class="link_menu">
-            <li>НАЙТИ ЭКСПЕРТА</li>
-          </a>
-          <a href="expert.php" class="link_menu">
-            <li>СТАТЬ ЭКСПЕРТОМ</li>
-          </a>
-          <a href="contacts.php" class="link_menu">
-            <li>КОНТАКТЫ</li>
-          </a>
-          <a href="#" class="burger">
-            <i class="fas fa-bars"></i>
-          </a>
-        </ul>
-        <div class="profile">
-          <div class="prof_phwh">
-            <div id="user_photo"></div>
-              <div id="user_who"></div>
+<?php include "header.php"; ?>
+<div class="select" style="cursor: auto;">
+	<div style="padding-top:75px;padding-bottom:30px; ">
+	   <div>
+	      <div class="container">
+		        <div class="col_12">
+			           <div class="section__topwrapper align_center">
+				               <div class="section__title title_xs">Промышленное производство<br></div>
+                 </div>
+		        </div>
+	      </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-4 align_left">
+            <div>
+              <div class="imgwrapper " style="padding-bottom:55.555555555556%;">
+                <div class="bgimg" style="background-image:url('img/foto_expert_1.jpg');" ></div>
+              </div>
+              <div>
+                <div class="name_md">Соловьев Александр</div>
+                <div class="descr descr_sm">Добыча полезных ископаемых. Разработка карьеров. Получение разрешительной документации. Опыт более 10 лет. Консультации по спец. технике.</div>
+              </div>
+            </div>
+            <div class="btn-wrapper">
+              <a href="#" class="btn btn_sm" style="color:#ffffff;background-color:#f5914f;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;">
+                <table style="width:100%; height:100%;">
+                  <tbody>
+                    <tr>
+                      <td>Чат 30руб/сооб.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </a>
+              <a href="#" class="btn btn_sm" style="color:#ffffff;background-color:#f5914f;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;">
+                <table style="width:100%; height:100%;">
+                  <tbody>
+                    <tr>
+                      <td> Письмо 400 руб</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </a>
+            </div>
           </div>
-          <div class="user_in">
-            <div id="user_name"></div>
-            <div id="user_balance"></div>
+            <div class="col-4 align_left">
+            <div>
+              <div class="imgwrapper " style="padding-bottom:55.555555555556%;">
+                <div class="bgimg" style="background-image:url('img/foto_expert_1.jpg');" ></div>
+              </div>
+              <div>
+                <div class="name_md">Соловьев Александр</div>
+                <div class="descr descr_sm">Добыча полезных ископаемых. Разработка карьеров. Получение разрешительной документации. Опыт более 10 лет. Консультации по спец. технике.</div>
+              </div>
+            </div>
+            <div class="btn-wrapper">
+              <a href="#" class="btn btn_sm" style="color:#ffffff;background-color:#f5914f;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;">
+                <table style="width:100%; height:100%;">
+                  <tbody>
+                    <tr>
+                      <td>Чат 30руб/сооб.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </a>
+              <a href="#" class="btn btn_sm" style="color:#ffffff;background-color:#f5914f;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;">
+                <table style="width:100%; height:100%;">
+                  <tbody>
+                    <tr>
+                      <td> Письмо 400 руб</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </a>
+            </div>
+          </div>
+            <div class="col-4 align_left">
+            <div>
+              <div class="imgwrapper " style="padding-bottom:55.555555555556%;">
+                <div class="bgimg" style="background-image:url('img/foto_expert_1.jpg');" ></div>
+              </div>
+              <div>
+                <div class="name_md">Соловьев Александр</div>
+                <div class="descr descr_sm">Добыча полезных ископаемых. Разработка карьеров. Получение разрешительной документации. Опыт более 10 лет. Консультации по спец. технике.</div>
+              </div>
+            </div>
+            <div class="btn-wrapper">
+              <a href="#" class="btn btn_sm" style="color:#ffffff;background-color:#f5914f;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;">
+                <table style="width:100%; height:100%;">
+                  <tbody>
+                    <tr>
+                      <td>Чат 30руб/сооб.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </a>
+              <a href="#" class="btn btn_sm" style="color:#ffffff;background-color:#f5914f;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;">
+                <table style="width:100%; height:100%;">
+                  <tbody>
+                    <tr>
+                      <td> Письмо 400 руб</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </a>
+            </div>
+          </div>
           </div>
         </div>
       </div>
-    </header>
+	  </div>
+</div>
 
 <div class="how_work pd-40">
   <div class="how_block1">

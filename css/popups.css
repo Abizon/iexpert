@@ -10,8 +10,8 @@
     animation-name: anim;
     opacity: 0;
     animation-duration: 1s;
-    animation-delay: 1s;
-        animation-fill-mode: forwards;
+    /* animation-delay: 1s; */
+    animation-fill-mode: forwards;
 }
 .popblock {
     width: 600px;
@@ -60,6 +60,9 @@
     padding: 20px;
     font-size: 1.5em;
     text-align: right;
+}
+.pop_close i {
+  cursor:pointer;
 }
 
 #pop_info {

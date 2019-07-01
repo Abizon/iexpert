@@ -1,55 +1,81 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php include "header.php"; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЯЭксперт</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/popups.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-</head>
-
-<body>
-  <div id="preload"><span class="load"></span></div>
-  <header>
-      <div class="navbar">
-        <a href="index.php" class="logo"></a>
-        <ul class="menu">
-          <a href="index.php" class="link_menu">
-            <li>ГЛАВНАЯ</li>
-          </a>
-          <a href="about.php" class="link_menu">
-            <li>О НАС</li>
-          </a>
-          <a href="select.php" class="link_menu">
-            <li>НАЙТИ ЭКСПЕРТА</li>
-          </a>
-          <a href="expert.php" class="link_menu">
-            <li>СТАТЬ ЭКСПЕРТОМ</li>
-          </a>
-          <a href="contacts.php" class="link_menu">
-            <li>КОНТАКТЫ</li>
-          </a>
-          <a href="#" class="burger">
-            <i class="fas fa-bars"></i>
-          </a>
-        </ul>
-        <div class="profile">
-          <div class="prof_phwh">
-            <div id="user_photo"></div>
-              <div id="user_who"></div>
+<div class="how_work pd-80">
+  <div class="expert">
+    <div class="cover__filter" style="height: 1126px;background-color: rgb(41, 34, 28);opacity: 0.7;"></div>
+    <div class="container">
+      <div class="mainblock col-8">
+        <div style="height:100vh;">
+          <div class="mainwrapper">
+            <div class="title title_xs">Зарабатывайте на ваших знаниях уже сегодня</div>
+            <div class="descr descr_md" style="padding-top:5px;padding-bottom:5px;">Станьте экспертом</div>
+            <div>
+              <div>
+                <div class="form__successbox text_md" style="display:none;"></div>
+                <div class="form__inputsbox">
+                  <div class="input-groups">
+                    <div class="input-title descr_md">Ваше ФИО</div>
+                    <div >
+                      <input type="text" name="Name" class="input" placeholder="Смирнов Иван Петрович" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                    </div>
+                  </div>
+                  <div class="input-groups">
+                    <div class="input-title descr_md" style="">Ваш e-mail</div>
+                    <div >
+                      <input type="text" name="Email" class="input" placeholder="smirnov@mail.ru" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                    </div>
+                  </div>
+                  <div class="input-groups">
+                    <div class="input-title descr_md" style="">Ваш телефон</div>
+                    <div >
+          		  	    <input type="tel" name="Phone" class="input js-tilda-mask " placeholder="+7 (999) 999-9999" pattern="[0-9]*" data-tilda-mask="+7 (999) 999-9999" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                    </div>
+                  </div>
+                  <div class="input-groups">
+                    <div class="input-title descr_md">Выберете категорию</div>
+                    <div >
+                      <div class="select__wrapper ">
+                        <select name="Выберете категорию" class="select" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                          <option value="Промышленное производство">Промышленное производство</option>
+                          <option value="Бизнес">Бизнес</option>
+                          <option value="Карьера">Карьера</option>
+                          <option value="Образование">Образование</option>
+                          <option value="Организация мероприятий">Организация мероприятий</option>
+                          <option value="Финансы">Финансы</option>
+                          <option value="Фитнес">Фитнес</option>
+                          <option value="Здоровье">Здоровье</option>
+                          <option value="PR&amp;Реклама">PR&amp;Реклама</option>
+                          <option value="Законодательство">Законодательство</option>
+                          <option value="Недвижимость">Недвижимость</option>
+                          <option value="Эмиграция">Эмиграция</option>
+                          <option value="Другая">Другая</option>
+                        </select>
+                      </div>
+                  </div>
+                </div>
+                <div class="input-groups">
+                  <div class="input-title descr_md">В списке нет моей категории</div>
+                  <div >
+                    <input type="text" name="свободная категория" class="input" placeholder="Категория" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                  </div>
+                </div>
+				        <div class="form__errorbox-middle">
+					        <div class="form__errorbox-wrapper" style="display:none;">
+                    <div class="form__errorbox-text text_md"></div>
+                  </div>
+                </div>
+                <div class="form__submit">
+                    <button type="submit" class="submit" style="color:#ffffff;background-color:#ff7300;border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px;">Зарегистрироваться</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="user_in">
-            <div id="user_name"></div>
-            <div id="user_balance"></div>
-          </div>
+		      <div class="form-bottom-text text text_xs">Вы соглашаетесь на обработку персональных данных</div>
         </div>
       </div>
-    </header>
-
-<div class="how_work pd-40">
+    </div>
+  </div>
+</div>
   <div class="how_block1">
       <div class="how_block1_1">
           <h1>ПЫТАЕТЕСЬ ИСКАТЬ ЭКСПЕРТОВ В ИНТЕРНЕТЕ?</h1>
