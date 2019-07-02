@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЯЭксперт</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/popups.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/popups.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.css">
 </head>
 
 <body>
@@ -34,12 +34,15 @@
             <a href="contacts.php" class="link_menu">
               <li>КОНТАКТЫ</li>
             </a>
-            <a href="#" class="burger">
+            <a href class="burger">
               <i class="fas fa-bars"></i>
             </a>
           </ul>
-          <div class="registration">Регистрация</div>
-          <div class="profile">
+          <div class="registration">
+            <div>Регистрация&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+            <div>Войти</div>
+          </div>
+          <div class="profile" data-toggle="dropdown">
             <div class="prof_phwh">
               <div id="user_photo"></div>
                 <div id="user_who"></div>
@@ -48,6 +51,10 @@
               <div id="user_name"></div>
               <div id="user_balance"></div>
             </div>
+            <div class="dropdown-menu">
+              <a href class="dropdown-item" id="exit">Выйти</a>
+            </div>
           </div>
+
         </div>
       </header>

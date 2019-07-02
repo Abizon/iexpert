@@ -59,7 +59,7 @@ body{
     align-items: center;
     width: 100%;
     justify-content: center;
-
+    margin: auto 0;
 }
 
 .link_menu {
@@ -84,6 +84,11 @@ body{
     /*    padding-left: 20px;*/
     display: none;
     margin-left: -20px;
+}
+
+.burger:focus, .burger:hover {
+    color: #681D98;
+    transition: .3s;
 }
 
 .logo {
@@ -117,8 +122,8 @@ header .registration:hover{
     width: 320px;
     height: auto;
     color: white;
-
-
+    position: relative;
+    cursor: pointer;
 }
 
 .prof_phwh {
@@ -157,13 +162,35 @@ header .registration:hover{
     padding-bottom: 5px;
     color: orange;
 }
+.profile:hover > .dropdown-menu{
+    display: block;
+}
+.dropdown-menu{
+    margin: 0;
+}
+.dropdown-item{
+    font-size: 0.95em;
+    font-weight: 600;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #681D98;
+    transition: .3s;
+    text-decoration: inherit;
+    background-color: white;
+
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #681D98;
+    transition: .3s;
+    text-decoration: inherit;
+    background-color: white;
+}
 
 .head_preview {
     background: url(../img/header.jpg) no-repeat right;
     background-size: auto 140vh;
     width: 100%;
     height: 80vh;
-
 }
 
 .head_text {

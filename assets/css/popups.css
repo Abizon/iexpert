@@ -15,12 +15,15 @@
 }
 .popblock {
     width: 600px;
-    height: 540px;
+    height: 600px;
     background-color: #2A2937;
     color: white;
     flex-direction: column;
     display: flex;
 
+}
+.popblock a{
+  cursor: pointer;
 }
 
 .poptogglers {
@@ -47,6 +50,9 @@
 }
 .pop_toggle2 {
     width: 49.7%;
+    color: dimgray;
+}
+.pop_toggle2:not([href]):not([tabindex]) {
     color: dimgray;
 }
 .pop_tog {

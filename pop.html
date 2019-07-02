@@ -2,29 +2,33 @@
     <div class="popblock">
         <div class="pop_close"><i class="fas fa-times-circle"></i></div>
         <div class="poptogglers">
-            <a href="#" class="pop_toggle1" onclick="toggle2()">СТАНЬ ПОЛЬЗОВАТЕЛЕМ!</a>
-            <!--
-                <div class="pop_tog"></div>
-                <a href="#" class="pop_toggle2" onclick="toggle1()">ЭКСПЕРТ</a>
--->
+            <a class="pop_toggle1" onclick="toggle2()">СТАНЬ ПОЛЬЗОВАТЕЛЕМ!</a>
+            <div class="pop_tog"></div>
+            <a class="pop_toggle2" onclick="toggle1()">ВОЙТИ</a>
         </div>
 
         <div id="pop_info">
             <input type="text" class="in" id="popname" placeholder="Ваше имя.." maxlength="10">
             <input type="email" class="in" id="popmail" placeholder="Ваша электронная почта.." maxlength="30">
             <input type="tel" class="in" id="poptel" placeholder="Ваш номер телефона.." maxlength="11">
-            <a href="#" id="pop_button1" class="pop_button" disabled>ВПЕРЕД</a>
+            <input type="password" class="in" id="poppas" placeholder="Ваш пароль.." maxlength="32">
+            <a id="pop_button1" class="pop_button" disabled>ЗАРЕГИСТРИРОВАТЬСЯ</a>
         </div>
 
 
         <div id="pop_info_exp" style="display: none">
+            <input type="email" class="signin" id="popnamein" placeholder="Ваша электронная почта.." maxlength="30">
+            <input type="password" class="signin" id="poppasin" placeholder="Ваш пароль.." maxlength="32">
+            <a id="pop_button2" class="pop_button">ВОЙТИ</a>
+        </div>
+        <!-- <div id="pop_info_exp" style="display: none">
             <input type="text" id="popnameexp" placeholder="Ваше имя.." maxlength="10">
             <input type="email" placeholder="Ваша электронная почта.." maxlength="30">
             <input type="tel" placeholder="Ваш номер телефона.." maxlength="11">
             <input type="text" placeholder="Ваша экспертная область.." maxlength="30">
             <input type="text" style="height: 100px" placeholder="Расскажите о себе.." maxlength="120">
             <a href="" id="pop_button2" class="pop_button">ВПЕРЕД</a>
-        </div>
+        </div> -->
 
     </div>
 </div>

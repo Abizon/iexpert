@@ -5,14 +5,29 @@ $(window).on('load', function () {
     $preloader.delay(500).fadeOut('slow');
 });
 
-var k = 0;
 
+var profile = $(".profile");
+var registration = $(".registration");
+
+
+/*******Сброс формы регистрации/формы*******/
+function reset_form(){
+document.getElementById("popname").value = "";
+document.getElementById("popmail").value = "";
+document.getElementById("poptel").value = "";
+document.getElementById("poppas").value = "";
+document.getElementById("popnamein").value = "";
+document.getElementById("poppasin").value = "";
+}
+
+/*******Табы в форме регистрации/формы*******/
+var k = 0;
 function toggle1() {
 
     if (k == 0) {
         $("#pop_info").toggle();
         $("#pop_info_exp").toggle();
-        $(".popblock").css("height", "740");
+        $(".popblock").css("height", "450");
         $(".pop_toggle2").css("color", "white");
         $(".pop_toggle1").css("color", "dimgray");
     }
@@ -24,14 +39,14 @@ function toggle2() {
     if (k == 1) {
         $("#pop_info_exp").toggle();
         $("#pop_info").toggle();
-        $(".popblock").css("height", "540");
+        $(".popblock").css("height", "600");
         $(".pop_toggle1").css("color", "white");
         $(".pop_toggle2").css("color", "dimgray");
     }
     k = 0;
 }
 
-
+/*******Регистрация пользователя*******/
 var bz = 0;
 //var bx = 0;
 
@@ -48,16 +63,16 @@ $("#pop_button1").click(function () {
 
 
     for (var i = 0; i < ($(".in").length); i++) {
-        if ($(".in:eq(" + i + ")").val() === '') {
+        if ($(".in:eq(" + i + ")").val() == null) {
             b = 0;
-            $(".in:eq(" + i + ")").css("border-color", "red")
+            $(".in:eq(" + i + ")").css("border-color", "red");
         } else {
             b += 1;
-            $(".in:eq(" + i + ")").css("border-color", "lightgreen")
+            $(".in:eq(" + i + ")").css("border-color", "lightgreen");
         }
     }
 
-    if (b == 3) {
+    if (b == 4) {
         $("#user_who").html('');
 
         localStorage.setItem("name", JSON.stringify($("#popname").val()));
@@ -71,8 +86,21 @@ $("#pop_button1").click(function () {
         $("#popback").hide();
         localStorage.setItem("who", JSON.stringify('*****'));
 
+        profile.show();
+        registration.hide();
+        reset_form();
+
     }
 });
+
+$("#exit").click(function () {
+    localStorage.removeItem("name");
+    localStorage.removeItem("off");
+    localStorage.removeItem("balance");
+    profile.hide();
+    registration.show();
+});
+
 $(".chat_button").click(function () {
   var name = JSON.parse(localStorage.getItem("name"));
   if (name != null){
@@ -99,11 +127,9 @@ function closer() {
 
 setTimeout(closer, 100)
 
-
+/******** Проверка регистрации ********/
 $(document).ready(function () {
   var name = JSON.parse(localStorage.getItem("name"));
-  var profile = $(".profile");
-  var registration = $(".registration");
   if (name != null){
     profile.show();
     registration.hide();
@@ -118,10 +144,10 @@ $(".registration").click(function(){
 })
 $(".pop_close").click(function(){
   $("#popback").hide();
+  reset_form();
 })
 
-
-
+/******** Онлайн экспертов ********/
 $(document).ready(function () {
     var list = $('.experts_gl_block');
 
@@ -139,7 +165,7 @@ $(document).ready(function () {
         });
     }, 5000);
 });
-
+/******** Смена отзывов ********/
 $(document).ready(function () {
     var list = $('.revs');
     var display = 1;
@@ -165,23 +191,17 @@ $(document).ready(function () {
         });
     }, 60000);
 });
-
+/******** Плавное перемещение к якорю********/
 $(function(){
-  $('a[href^="#"]').on('click', function(event) {
-    // отменяем стандартное действие
+  $("a[href^='#']").on('click', function(event) {
     event.preventDefault();
 
     var sc = $(this).attr("href"),
         dn = $(sc).offset().top;
-    /*
-    * sc - в переменную заносим информацию о том, к какому блоку надо перейти
-    * dn - определяем положение блока на странице
-    */
-
     $('html, body').animate({scrollTop: dn}, 1000);
-
-    /*
-    * 1000 скорость перехода в миллисекундах
-    */
   });
+});
+/******** Маски для формы регистрации********/
+$(function(){
+  $("#poptel").mask("+7(999) 999-9999");
 });
