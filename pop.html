@@ -7,28 +7,21 @@
             <a class="pop_toggle2" onclick="toggle1()">ВОЙТИ</a>
         </div>
 
-        <div id="pop_info">
-            <input type="text" class="in" id="popname" placeholder="Ваше имя.." maxlength="10">
-            <input type="email" class="in" id="popmail" placeholder="Ваша электронная почта.." maxlength="30">
-            <input type="tel" class="in" id="poptel" placeholder="Ваш номер телефона.." maxlength="11">
-            <input type="password" class="in" id="poppas" placeholder="Ваш пароль.." maxlength="32">
-            <a id="pop_button1" class="pop_button" disabled>ЗАРЕГИСТРИРОВАТЬСЯ</a>
-        </div>
+        <form id="pop_info" method="post">
+            <input type="text" class="in" id="popsurname" name="popsurname" placeholder="Ваша фамилия.." maxlength="40">
+            <input type="text" class="in" id="popname" name="popname" placeholder="Ваше имя.." maxlength="40">
+            <input type="text" class="in" id="popmiddlename" name="popmiddlename" placeholder="Ваше отчество.." maxlength="40">
+            <input type="email" class="in" id="popmail" name="popmail" placeholder="Ваша электронная почта.." maxlength="30">
+            <input type="tel" class="in" id="poptel" name="poptel" placeholder="Ваш номер телефона..">
+            <input type="password" class="in" id="poppas" name="poppas" placeholder="Ваш пароль.." maxlength="32">
+            <input type="button" class="pop_button" id="pop_button1" name="submit" value="Зарегистрироваться" onclick="registr()">
+        </form>
 
 
         <div id="pop_info_exp" style="display: none">
-            <input type="email" class="signin" id="popnamein" placeholder="Ваша электронная почта.." maxlength="30">
-            <input type="password" class="signin" id="poppasin" placeholder="Ваш пароль.." maxlength="32">
-            <a id="pop_button2" class="pop_button">ВОЙТИ</a>
+            <input type="email" class="signin" id="popnamein" name="popnamein" placeholder="Ваша электронная почта.." maxlength="30">
+            <input type="password" class="signin" id="poppasin" name="poppasin" placeholder="Ваш пароль.." maxlength="32">
+            <input type="button" class="pop_button" id="pop_button2" name="submit" value="Войти" onclick="signin()">
         </div>
-        <!-- <div id="pop_info_exp" style="display: none">
-            <input type="text" id="popnameexp" placeholder="Ваше имя.." maxlength="10">
-            <input type="email" placeholder="Ваша электронная почта.." maxlength="30">
-            <input type="tel" placeholder="Ваш номер телефона.." maxlength="11">
-            <input type="text" placeholder="Ваша экспертная область.." maxlength="30">
-            <input type="text" style="height: 100px" placeholder="Расскажите о себе.." maxlength="120">
-            <a href="" id="pop_button2" class="pop_button">ВПЕРЕД</a>
-        </div> -->
-
     </div>
 </div>

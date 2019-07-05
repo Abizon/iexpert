@@ -15,7 +15,7 @@
 }
 .popblock {
     width: 600px;
-    height: 600px;
+    height: 750px;
     background-color: #2A2937;
     color: white;
     flex-direction: column;
@@ -91,6 +91,17 @@
     margin-bottom: 30px;
     border-bottom: 1px solid orange;
 }
+#pop_info input[type=button], #pop_info_exp input[type=button]{
+    color: white;
+    background-color: rebeccapurple;
+    padding: 20px;
+    font-size: 1.4em;
+    border-radius: 5px;
+    margin-top: 6%;
+    text-decoration: none;
+    border: 0;
+    margin-bottom: 0px;
+}
 
 #pop_info input::placeholder {
     color: #7881A1;
@@ -101,15 +112,7 @@
     outline-offset: 0;
 }
 
-.pop_button {
-    color: white;
-    background-color: rebeccapurple;
-    padding: 20px;
-    font-size: 1.4em;
-    border-radius: 5px;
-    margin-top: 6%;
-    text-decoration: none;
-}
+
 .pop_button:hover{
   color: inherit;
   text-decoration: inherit;

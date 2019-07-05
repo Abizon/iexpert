@@ -77,17 +77,23 @@
   </div>
 </div>
 </div>
+<?php
+  if(isset($_SESSION["email"]) && isset($_SESSION["password"])){
+?>
 <div class="chat" style="display:none">
-<div class="chat-header">
-  <span class="header-label">Чат</span>
-  <i class="fas fa-times close"></i>
+  <div class="chat-header">
+    <span class="header-label">Чат</span>
+    <i class="fas fa-times close"></i>
+  </div>
+  <div id="chat-content"></div>
+  <div class="editor">
+    <input type="text" id="message" placeholder="Введите сообщение..." />
+    <a id="send" class="btn btn-icon btn-big right"><i class="fas fa-arrow-right"></i></a>
+  </div>
 </div>
-<div id="chat-content"></div>
-<div class="editor">
-  <input type="text" id="message" placeholder="Введите сообщение..." />
-  <a id="send" class="btn btn-icon btn-big right"><i class="fas fa-arrow-right"></i></a>
-</div>
-</div>
+<?php
+  }
+?>
 
 <script src="assets/js/jquery-3.4.1.min.js"></script>
 <script src="assets/js/jquery.maskedinput.js"></script>

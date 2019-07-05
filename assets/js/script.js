@@ -1,3 +1,4 @@
+/*******Загрузка preload перед загрузкой страницы*******/
 $(window).on('load', function () {
     var $preloader = $('#preload'),
         $load = $preloader.find('.load');
@@ -5,25 +6,9 @@ $(window).on('load', function () {
     $preloader.delay(500).fadeOut('slow');
 });
 
-
-var profile = $(".profile");
-var registration = $(".registration");
-
-
-/*******Сброс формы регистрации/формы*******/
-function reset_form(){
-document.getElementById("popname").value = "";
-document.getElementById("popmail").value = "";
-document.getElementById("poptel").value = "";
-document.getElementById("poppas").value = "";
-document.getElementById("popnamein").value = "";
-document.getElementById("poppasin").value = "";
-}
-
 /*******Табы в форме регистрации/формы*******/
 var k = 0;
 function toggle1() {
-
     if (k == 0) {
         $("#pop_info").toggle();
         $("#pop_info_exp").toggle();
@@ -33,73 +18,57 @@ function toggle1() {
     }
     k = 1;
 }
-
 function toggle2() {
-
     if (k == 1) {
         $("#pop_info_exp").toggle();
         $("#pop_info").toggle();
-        $(".popblock").css("height", "600");
+        $(".popblock").css("height", "750");
         $(".pop_toggle1").css("color", "white");
         $(".pop_toggle2").css("color", "dimgray");
     }
     k = 0;
 }
 
-/*******Регистрация пользователя*******/
-var bz = 0;
+/*******Локальная регистрация пользователя*******/
+// var bz = 0;
 //var bx = 0;
 
-$("#in").keypress(function () {
-    if ($(this).val()) {
-        alert('ok')
-    } else alert('NO')
-})
-
+// $("#in").keypress(function () {
+//     if ($(this).val()) {
+//         alert('ok')
+//     } else alert('NO')
+// })
 var price = 30;
-var balance_user = 125;
-$("#pop_button1").click(function () {
-    var b = 0;
+function localRegistr(){
 
-
-    for (var i = 0; i < ($(".in").length); i++) {
-        if ($(".in:eq(" + i + ")").val() == null) {
-            b = 0;
-            $(".in:eq(" + i + ")").css("border-color", "red");
-        } else {
-            b += 1;
-            $(".in:eq(" + i + ")").css("border-color", "lightgreen");
-        }
+  var balance_user = 125;
+  var b = 0;
+  for (var i = 0; i < ($(".in").length); i++) {
+    if ($(".in:eq(" + i + ")").val() == null) {
+      b = 0;
+      $(".in:eq(" + i + ")").css("border-color", "red");
+    } else {
+        b += 1;
+        $(".in:eq(" + i + ")").css("border-color", "lightgreen");
     }
+  }
 
-    if (b == 4) {
-        $("#user_who").html('');
+  if (b == 6) {
+    $("#user_who").html('');
 
-        localStorage.setItem("name", JSON.stringify($("#popname").val()));
-        localStorage.setItem("off", bz);
+    localStorage.setItem("name", JSON.stringify($("#popname").val()));
+    // localStorage.setItem("off", bz);
+    localStorage.setItem("balance", balance_user);
 
-        localStorage.setItem("balance", balance_user);
-
-        $("#user_name").html('' + JSON.parse(localStorage.getItem("name")) + '');
-        $("#user_balance").html('' + JSON.parse(localStorage.getItem("balance")) + ' руб.');
-        localStorage.setItem("bal", JSON.stringify('' + JSON.parse(localStorage.getItem("balance")) + ' руб.'));
-        $("#popback").hide();
-        localStorage.setItem("who", JSON.stringify('*****'));
-
-        profile.show();
-        registration.hide();
-        reset_form();
-
+    $("#user_name").html('' + JSON.parse(localStorage.getItem("name")) + '');
+    $("#user_balance").html('' + JSON.parse(localStorage.getItem("balance")) + ' руб.');
+    localStorage.setItem("bal", JSON.stringify('' + JSON.parse(localStorage.getItem("balance")) + ' руб.'));
+    $("#popback").hide();
+    localStorage.setItem("who", JSON.stringify('*****'));
+    document.getElementById('pop_info').reset()
     }
-});
+}
 
-$("#exit").click(function () {
-    localStorage.removeItem("name");
-    localStorage.removeItem("off");
-    localStorage.removeItem("balance");
-    profile.hide();
-    registration.show();
-});
 
 $(".chat_button").click(function () {
   var name = JSON.parse(localStorage.getItem("name"));
@@ -114,51 +83,120 @@ $(".close").click(function(){
   $(".chat").hide();
 })
 
-function closer() {
+/******** Обновление данных из локального хранилища ********/
+// function closer() {
+//     if ((JSON.parse(localStorage.getItem("bal"))) != null) {
+//         $("#popback").hide();
+//     }
+//     $("#user_who").html('');
+//     $("#user_name").html('' + JSON.parse(localStorage.getItem("name")) + '');
+//     $("#user_balance").html('' + JSON.parse(localStorage.getItem("bal")) + '');
+// }
+// setTimeout(closer, 100)
 
-    if ((JSON.parse(localStorage.getItem("bal"))) != null) {
-        $("#popback").hide();
+/******** Загрузка данных из базы ********/
+$(document).ready(function () {
+  $.ajax({
+      url:     'registration.php',
+      type:     "POST",
+      dataType: "html",
+      data: {type:'profile'},
+      success: function(response) {
+        // alert(response);
+        result = $.parseJSON(response);
+        if (result!=''){
+          result = $.parseJSON(response);
+          localStorage.setItem("name", result.name);
+          localStorage.setItem("balance", result.balance);
+          $("#user_name").html('' + JSON.parse(localStorage.getItem("name")) + '');
+          $("#user_balance").html('' + JSON.parse(localStorage.getItem("balance")) + ' руб.');
+          localStorage.setItem("bal", JSON.stringify('' + JSON.parse(localStorage.getItem("balance")) + ' руб.'));
+        }
+    },
+    error: function(response) {
+          alert(response);
     }
-    $("#user_who").html('');
-    $("#user_name").html('' + JSON.parse(localStorage.getItem("name")) + '');
-    $("#user_balance").html('' + JSON.parse(localStorage.getItem("bal")) + '');
-
+  });
+});
+/******** Регистрация ********/
+function registr(){
+  $.ajax({
+      url:     'registration.php',
+      type:     "POST",
+      dataType: "html",
+      data: {
+         type:'registr',
+         popsurname: $('#popsurname').val(),
+         popname: $('#popname').val(),
+         popmiddlename: $('#popmiddlename').val(),
+         popmail: $('#popmail').val(),
+         poptel: $('#poptel').val(),
+         poppas: $('#poppas').val()
+    },
+      success: function(response) {
+        //alert(response);
+        location.reload();
+    },
+    error: function(response) {
+          alert(response);
+    }
+  });
+}
+/******** Вход в аккаунт ********/
+function signin(){
+  $.ajax({
+      url:     'registration.php',
+      type:     "POST",
+      dataType: "html",
+      data: {
+         type:'signin',
+         popnamein: $('#popnamein').val(),
+         poppasin: $('#poppasin').val()
+    },
+      success: function(response) {
+        //alert(response);
+        location.reload();
+    },
+    error: function(response) {
+          alert(response);
+    }
+  });
+}
+/******** Выход из аккаунта ********/
+function exit(){
+  $.ajax({
+      url:     'registration.php',
+      type:     "POST",
+      data: {type:'exit'},
+      success: function(response) {
+        //alert(response);
+        localStorage.removeItem("name");
+        localStorage.removeItem("balance");
+        location.reload();
+      },
+      error: function(response) {
+          alert('Ошибка'+response);
+      }
+  });
 }
 
-setTimeout(closer, 100)
-
-/******** Проверка регистрации ********/
-$(document).ready(function () {
-  var name = JSON.parse(localStorage.getItem("name"));
-  if (name != null){
-    profile.show();
-    registration.hide();
-  }
-  else {
-    profile.hide();
-    registration.show();
-  }
-});
 $(".registration").click(function(){
   $("#popback").show();
 })
 $(".pop_close").click(function(){
   $("#popback").hide();
-  reset_form();
+  document.getElementById('pop_info').reset()
 })
 
 /******** Онлайн экспертов ********/
 $(document).ready(function () {
     var list = $('.experts_gl_block');
-
     setInterval(function () {
         list.map(function () {
             var online = Math.random() > .5;
 			var state = $(this).find('.fas.fa-circle');
-
 			state.removeClass('online offline');
-
-            if (online)
+      if (online)
 				state.addClass('online');
 			else
 				state.addClass('offline');
@@ -169,7 +207,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     var list = $('.revs');
     var display = 1;
-
     setInterval(function () {
         list.map(function () {
             var group1 = $(this).find('.rev_1');

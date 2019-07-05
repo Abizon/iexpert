@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -38,10 +41,16 @@
               <i class="fas fa-bars"></i>
             </a>
           </ul>
+          <?php
+            if(!isset($_SESSION["email"]) && !isset($_SESSION["password"])){
+          ?>
           <div class="registration">
             <div>Регистрация&nbsp;&nbsp;|&nbsp;&nbsp;</div>
             <div>Войти</div>
           </div>
+          <?php
+            }else{
+          ?>
           <div class="profile" data-toggle="dropdown">
             <div class="prof_phwh">
               <div id="user_photo"></div>
@@ -52,9 +61,11 @@
               <div id="user_balance"></div>
             </div>
             <div class="dropdown-menu">
-              <a href class="dropdown-item" id="exit">Выйти</a>
+              <a href class="dropdown-item" id="exit" onclick="exit()">Выйти</a>
             </div>
           </div>
-
+          <?php
+            }
+          ?>
         </div>
       </header>
