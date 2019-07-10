@@ -1091,7 +1091,7 @@ header .registration:hover{
   transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
   background-image: url(../img/expert_form.jpg);
-  height: 1126px;
+  height: 1400px;
   background-attachment: scroll;
 }
 .expert .cover__filter{

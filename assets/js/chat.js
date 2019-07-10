@@ -1,17 +1,53 @@
-if (document.getElementById("chat-content")!=null){
-  var arr=[];
-  var arr2=JSON.parse(localStorage.getItem("chat"));
-  if (arr2!=null){
-      arr=arr2;
-      for (var i = 0; i < (arr2.length); i++) {
-        var chat_container = document.createElement('div');
-        chat_container.className = "message-container";
-        chat_container.innerHTML = arr2[i];
-        document.getElementById("chat-content").appendChild(chat_container);
-      }
+var id_exp='';
+var id_user='';
+$(".chat_button").click(function () {
+  id_exp = this.id;
+  id_user = JSON.parse(localStorage.getItem('id_user'));
+  if (document.getElementById("chat-content")!=null){
+    $(".chat").show();
+    loadchat();
   }
-  $("#send").click(function(){
+  else{
+    $("#popback").show();
+  }
+});
+$(".close").click(function(){
+  $(".chat").hide();
+});
+function loadchat(){
+  var arr=[];
+  id_exp = id_exp.replace(/expert/g, '');
+  $.ajax({
+    url:     'registration.php',
+    type:     "POST",
+    dataType: "html",
+    data: {
+       type:'chat',
+       id_exp: id_exp,
+       id_user: id_user
+    },
+    success: function(response) {
+      result = $.parseJSON(response);
+      if (result!=''){
+        for (var i = 0; i < (result.length); i++) {
+          var chat_container = document.createElement('div');
+          chat_container.className = "message-container";
+          $message = " <div class=\"pic-container\"> <img src=\"https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg\" alt=\"\" class=\"profilePic\" />     <div class=\"status\"></div>  </div>  <h3 class=\"name\">";
+          $message += ''+'name'+'';
+          $message += "</h3><div class=\"message\">";
+          $message += "<p>"+result[i].text+"</p>";
+          $message += "</div><div class=\"time\"><span>"+result[i].datetime+"</span></div>"
+          chat_container.innerHTML = $message;
+          document.getElementById("chat-content").appendChild(chat_container);
+        }
+      }
+    },
+    error: function(response) {
+      alert('Ошибка'+response);
+    }
+  });
 
+  $("#send").click(function(){
     if (JSON.parse(localStorage.getItem("balance")) < price) {
       alert('Недостаточно средств');
     } else {

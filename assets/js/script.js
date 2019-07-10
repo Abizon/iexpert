@@ -69,20 +69,6 @@ function localRegistr(){
     }
 }
 
-
-$(".chat_button").click(function () {
-  var name = JSON.parse(localStorage.getItem("name"));
-  if (name != null){
-    $(".chat").show();
-  }
-  else{
-    $("#popback").show();
-  }
-})
-$(".close").click(function(){
-  $(".chat").hide();
-})
-
 /******** Обновление данных из локального хранилища ********/
 // function closer() {
 //     if ((JSON.parse(localStorage.getItem("bal"))) != null) {
@@ -102,15 +88,24 @@ $(document).ready(function () {
       dataType: "html",
       data: {type:'profile'},
       success: function(response) {
-        // alert(response);
+        //alert(response);
         result = $.parseJSON(response);
         if (result!=''){
           result = $.parseJSON(response);
-          localStorage.setItem("name", result.name);
-          localStorage.setItem("balance", result.balance);
-          $("#user_name").html('' + JSON.parse(localStorage.getItem("name")) + '');
-          $("#user_balance").html('' + JSON.parse(localStorage.getItem("balance")) + ' руб.');
-          localStorage.setItem("bal", JSON.stringify('' + JSON.parse(localStorage.getItem("balance")) + ' руб.'));
+          if (result.type=="user"){
+            localStorage.setItem('id_user', result.id);
+            localStorage.setItem("name", result.name);
+            localStorage.setItem("balance", result.balance);
+            $("#user_name").html('' + result.name+'');//JSON.parse(localStorage.getItem("name")) + '');
+            $("#user_balance").html('' + result.balance+' руб.');//JSON.parse(localStorage.getItem("balance")) + ' руб.');
+            localStorage.setItem("bal", JSON.stringify('' + JSON.parse(localStorage.getItem("balance")) + ' руб.'));
+          }
+          if (result.type=="exp"){
+            //localStorage.setItem("balance", result.balance);
+            $("#user_name").html('' + result.name+'');//JSON.parse(localStorage.getItem('name')) + '');
+            //$("#user_balance").html('' + JSON.parse(localStorage.getItem("balance")) + ' руб.');
+            //localStorage.setItem("bal", JSON.stringify('' + JSON.parse(localStorage.getItem("balance")) + ' руб.'));
+          }
         }
     },
     error: function(response) {
@@ -118,7 +113,7 @@ $(document).ready(function () {
     }
   });
 });
-/******** Регистрация ********/
+/******** Регистрация пользователя ********/
 function registr(){
   $.ajax({
       url:     'registration.php',
@@ -136,6 +131,31 @@ function registr(){
       success: function(response) {
         //alert(response);
         location.reload();
+    },
+    error: function(response) {
+          alert(response);
+    }
+  });
+}
+/******** Регистрация эксперта ********/
+function registr_exp(){
+  $.ajax({
+      url:     'registration.php',
+      type:     "POST",
+      dataType: "html",
+      data: {
+         type:'registr_exp',
+         exp_surname: $('#exp_surname').val(),
+         exp_name: $('#exp_name').val(),
+         exp_middlename: $('#exp_middlename').val(),
+         exp_mail: $('#exp_mail').val(),
+         exp_phone: $('#exp_phone').val(),
+         expcategory: $('#expcategory').val(),
+         exp_pas: $('#exp_pas').val()
+    },
+      success: function(response) {
+        alert(response);
+        //location.reload();
     },
     error: function(response) {
           alert(response);
@@ -240,5 +260,6 @@ $(function(){
 });
 /******** Маски для формы регистрации********/
 $(function(){
+  $("#exp_phone").mask("+7(999) 999-9999");
   $("#poptel").mask("+7(999) 999-9999");
 });

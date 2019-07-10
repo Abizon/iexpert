@@ -2,7 +2,7 @@
 
 <div class="how_work pd-80">
   <div class="expert">
-    <div class="cover__filter" style="height: 1126px;background-color: rgb(41, 34, 28);opacity: 0.7;"></div>
+    <div class="cover__filter" style="height: 1400px;background-color: rgb(41, 34, 28);opacity: 0.7;"></div>
     <div class="container">
       <div class="mainblock col-8">
         <div style="height:100vh;">
@@ -14,49 +14,67 @@
                 <div class="form__successbox text_md" style="display:none;"></div>
                 <div class="form__inputsbox">
                   <div class="input-groups">
-                    <div class="input-title descr_md">Ваше ФИО</div>
+                    <div class="input-title descr_md">Ваша фамилия</div>
                     <div >
-                      <input type="text" name="Name" class="input" placeholder="Смирнов Иван Петрович" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                      <input type="text" id="exp_surname" name="exp_surname" class="input" placeholder="Смирнов" maxlength="40" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                    </div>
+                  </div>
+                  <div class="input-groups">
+                    <div class="input-title descr_md">Ваше имя</div>
+                    <div >
+                      <input type="text" name="exp_name" id="exp_name" class="input" placeholder="Иван" maxlength="40" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                    </div>
+                  </div>
+                  <div class="input-groups">
+                    <div class="input-title descr_md">Ваше отчество</div>
+                    <div >
+                      <input type="text" name="exp_middlename" id="exp_middlename"  class="input" placeholder="Петрович" maxlength="40" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
                     </div>
                   </div>
                   <div class="input-groups">
                     <div class="input-title descr_md" style="">Ваш e-mail</div>
                     <div >
-                      <input type="text" name="Email" class="input" placeholder="smirnov@mail.ru" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                      <input type="text" name="exp_mail" id="exp_mail" class="input" placeholder="smirnov@mail.ru" maxlength="30" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
                     </div>
                   </div>
                   <div class="input-groups">
                     <div class="input-title descr_md" style="">Ваш телефон</div>
                     <div >
-          		  	    <input type="tel" name="Phone" class="input js-tilda-mask " placeholder="+7 (999) 999-9999" pattern="[0-9]*" data-tilda-mask="+7 (999) 999-9999" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+          		  	    <input type="tel" name="exp_phone" id="exp_phone" class="input js-tilda-mask " placeholder="+7 (999) 999-9999" pattern="[0-9]*" data-tilda-mask="+7 (999) 999-9999" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
                     </div>
                   </div>
                   <div class="input-groups">
                     <div class="input-title descr_md">Выберете категорию</div>
-                    <div >
-                      <div class="select__wrapper ">
-                        <select name="Выберете категорию" class="select" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
-                          <option value="Промышленное производство">Промышленное производство</option>
-                          <option value="Бизнес">Бизнес</option>
-                          <option value="Карьера">Карьера</option>
-                          <option value="Образование">Образование</option>
-                          <option value="Организация мероприятий">Организация мероприятий</option>
-                          <option value="Финансы">Финансы</option>
-                          <option value="Фитнес">Фитнес</option>
-                          <option value="Здоровье">Здоровье</option>
-                          <option value="PR&amp;Реклама">PR&amp;Реклама</option>
-                          <option value="Законодательство">Законодательство</option>
-                          <option value="Недвижимость">Недвижимость</option>
-                          <option value="Эмиграция">Эмиграция</option>
-                          <option value="Другая">Другая</option>
-                        </select>
+                      <div >
+                        <div class="select__wrapper ">
+                          <select name="expcategory" id="expcategory" class="select" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                            <option value="1">Промышленное производство</option>
+                            <option value="2">Бизнес</option>
+                            <option value="3">Карьера</option>
+                            <option value="4">Образование</option>
+                            <option value="5">Организация мероприятий</option>
+                            <option value="6">Финансы</option>
+                            <option value="7">Фитнес</option>
+                            <option value="8">Здоровье</option>
+                            <option value="9">PR&amp;Реклама</option>
+                            <option value="10">Законодательство</option>
+                            <option value="11">Недвижимость</option>
+                            <option value="12">Эмиграция</option>
+                            <option value="13">Другая</option>
+                          </select>
+                        </div>
                       </div>
                   </div>
-                </div>
                 <div class="input-groups">
                   <div class="input-title descr_md">В списке нет моей категории</div>
                   <div >
-                    <input type="text" name="свободная категория" class="input" placeholder="Категория" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                    <input type="text" name="exp_newcategory" class="input" placeholder="Категория" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
+                  </div>
+                </div>
+                <div class="input-groups">
+                  <div class="input-title descr_md">Пароль</div>
+                  <div >
+                    <input type="password" name="exp_pas" id="exp_pas" class="input" placeholder="Пароль" maxlength="32" style="color:#000000;  background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;">
                   </div>
                 </div>
 				        <div class="form__errorbox-middle">
@@ -65,7 +83,7 @@
                   </div>
                 </div>
                 <div class="form__submit">
-                    <button type="submit" class="submit" style="color:#ffffff;background-color:#ff7300;border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px;">Зарегистрироваться</button>
+                    <button type="button" class="submit" onclick="registr_exp()" style="color:#ffffff;background-color:#ff7300;border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px;">Зарегистрироваться</button>
                 </div>
               </div>
             </div>
